@@ -10,13 +10,15 @@ import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
+    var diceImage : ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
-
+        lateinit var diceImage : ImageView
+        diceImage = findViewById(R.id.dice_image)
 
     }
 
